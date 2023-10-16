@@ -1,0 +1,40 @@
+import prompt
+from random import randint
+from ..cli import welcome_user
+
+
+def main():
+    round_game = 5
+    name = welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    dict_answer = {'yes': True, 'no': False}
+    answer = True
+    current_round = 0
+    game_over = False
+    while (answer and current_round < round_game):
+        current_round += 1
+        randvalue = randint(1, 25)
+        print(f'Question: {randvalue}')
+        answer = prompt.string('Your answer: ')
+        if randvalue % 2 == 0:
+            if dict_answer[answer] is True:
+                print('Correct!')
+            else:
+                game_over = True
+                print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+                break
+        else:
+            if dict_answer[answer] is False:
+                print('Correct!')
+            else:
+                game_over = True
+                print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+                break
+    if game_over:
+        print(f"Let's try again, {name}!")
+    else:
+        print(f'Congratulations, {name}!')
+
+
+if __name__ == '__main__':
+    main()
