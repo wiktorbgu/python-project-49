@@ -1,10 +1,13 @@
 import prompt
 from random import randint
 from math import gcd
-from ..cli import welcome_user
+from brain_games.cli import welcome_user
 
 round_game = 3
 name = welcome_user()
+
+MIN_VAL_RANDOM_NUMBER = 1
+MAX_VAL_RANDOM_NUMBER = 50
 
 
 def main():
@@ -14,8 +17,8 @@ def main():
     game_over = False
     while (answer and current_round < round_game):
         current_round += 1
-        randvalue1 = randint(1, 50)
-        randvalue2 = randint(1, 50)
+        randvalue1 = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
+        randvalue2 = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
         reslt = gcd(randvalue1, randvalue2)
         print(f'Question: {randvalue1} {randvalue2}')
         answer = prompt.string('Your answer: ')

@@ -1,10 +1,13 @@
 import prompt
 from random import randint
-from ..cli import welcome_user
+from brain_games.cli import welcome_user
 
 round_game = 3
 name = welcome_user()
 dict_answer = {'yes': True, 'no': False}
+
+MIN_VAL_RANDOM_NUMBER = 1
+MAX_VAL_RANDOM_NUMBER = 1000
 
 
 def is_prime(random_number):
@@ -23,7 +26,7 @@ def main():
     game_over = False
     while (answer and current_round < round_game):
         current_round += 1
-        randvalue = randint(1, 1000)
+        randvalue = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
         print(f'Question: {randvalue}')
         answer = prompt.string('Your answer: ')
         if is_prime(randvalue) is True:
