@@ -1,12 +1,11 @@
 import prompt
-from random import randint, choices
+from random import randint
 from math import gcd
 from ..cli import welcome_user
 
 round_game = 3
 name = welcome_user()
 
-gcd(7,17)
 
 def main():
     print('Find the greatest common divisor of given numbers.')
