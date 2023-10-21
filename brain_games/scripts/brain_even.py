@@ -2,12 +2,13 @@ import prompt
 from random import randint
 from ..cli import welcome_user
 
+round_game = 3
+name = welcome_user()
+dict_answer = {'yes': True, 'no': False}
+
 
 def main():
-    round_game = 5
-    name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    dict_answer = {'yes': True, 'no': False}
     answer = True
     current_round = 0
     game_over = False
