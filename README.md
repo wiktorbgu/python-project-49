@@ -280,13 +280,11 @@ List of dev-dependencies:
 ├── brain_games
 │   ├── __init__.py
 │   ├── cli.py
-│   ├── engine
-│   │   ├── __init__.py
-│   │   └── game_engine.py
 │   ├── games
 │   │   ├── __init__.py
 │   │   ├── calc.py
 │   │   ├── even.py
+│   │   ├── game_runer.py
 │   │   ├── gcd.py
 │   │   ├── progression.py
 │   │   └── prime.py
