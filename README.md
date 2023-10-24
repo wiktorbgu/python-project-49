@@ -312,8 +312,6 @@ The commands most used in development are listed in the Makefile:
     <dd>Installing a package in the user environment.</dd>
     <dt><code>make build</code></dt>
     <dd>Building the distribution of he Poetry package.</dd>
-    <dt><code>make package-force-reinstall</code></dt>
-    <dd>Reinstalling the package in the user environment.</dd>
     <dt><code>make lint</code></dt>
     <dd>Checking code with linter.</dd>
 </dl>
