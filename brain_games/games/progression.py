@@ -30,7 +30,7 @@ def brain_progression(current_round):
     progression_str = ' '.join(result_progression)
     print(f'Question: {progression_str}')
     answer = prompt.string('Your answer: ')
-    return int(answer), correct_result
+    return answer, str(correct_result)
 
 
 def run_brain_progression():
