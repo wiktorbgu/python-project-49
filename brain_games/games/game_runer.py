@@ -1,7 +1,7 @@
 from brain_games.cli import welcome_user
 
 ROUND_GAME = 3
-NAME = welcome_user()
+USERNAME = welcome_user()
 
 
 def run_game(game):
@@ -15,9 +15,9 @@ def run_game(game):
         else:
             success_game = False
             print(f"'{user_answer}' is wrong answer ;(. ", end='')
-            print("Correct answer was '{correct_result}'.")
+            print(f"Correct answer was '{correct_result}'.")
             break
     if success_game:
-        print(f'Congratulations, {NAME}!')
+        print(f'Congratulations, {USERNAME}!')
     else:
-        print(f"Let's try again, {NAME}!")
+        print(f"Let's try again, {USERNAME}!")
