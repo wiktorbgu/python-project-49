@@ -12,6 +12,7 @@ MAX_VAL_STEP = 30
 MIN_VAL_START_PROGRESS = 1
 MAX_VAL_START_PROGRESS = 50
 
+
 def brain_progression(current_round):
     if current_round == 1:
         print('What number is missing in the progression?')
@@ -31,8 +32,10 @@ def brain_progression(current_round):
     answer = prompt.string('Your answer: ')
     return int(answer), correct_result
 
+
 def run_brain_progression():
     run_game(brain_progression)
+
 
 if __name__ == '__main__':
     run_game(brain_progression)
