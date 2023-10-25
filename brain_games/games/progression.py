@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import prompt
 from random import randint, choices
 from brain_games.games.game_runer import run_game
 
@@ -29,8 +28,7 @@ def brain_progression(current_round):
     result_progression[index_skip_value] = '..'
     progression_str = ' '.join(result_progression)
     print(f'Question: {progression_str}')
-    answer = prompt.string('Your answer: ')
-    return answer, str(correct_result)
+    return str(correct_result)
 
 
 def run_brain_progression():

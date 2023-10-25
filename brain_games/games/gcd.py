@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import prompt
 from random import randint
 from math import gcd
 from brain_games.games.game_runer import run_game
@@ -15,8 +14,7 @@ def brain_gcd(current_round):
     randvalue2 = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
     correct_result = gcd(randvalue1, randvalue2)
     print(f'Question: {randvalue1} {randvalue2}')
-    answer = prompt.string('Your answer: ')
-    return int(answer), correct_result
+    return str(correct_result)
 
 
 def run_brain_gcd():

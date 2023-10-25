@@ -1,3 +1,4 @@
+import prompt
 from brain_games.cli import welcome_user
 
 ROUND_GAME = 3
@@ -8,7 +9,8 @@ def run_game(game):
     current_round = 0
     while (current_round < ROUND_GAME):
         current_round += 1
-        user_answer, correct_result = game(current_round)
+        correct_result = game(current_round)
+        user_answer = prompt.string('Your answer: ')
         if user_answer == correct_result:
             print('Correct!')
         else:

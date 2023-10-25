@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import prompt
 from random import randint
 from brain_games.games.game_runer import run_game
 
@@ -21,11 +20,10 @@ def brain_prime(current_round):
         print('Answer "yes" if given number is prime. Otherwise answer "no".')
     randvalue = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
     print(f'Question: {randvalue}')
-    answer = prompt.string('Your answer: ')
     if is_prime(randvalue) is True:
-        return answer, 'yes'
+        return 'yes'
     else:
-        return answer, 'no'
+        return 'no'
 
 
 def run_brain_prime():

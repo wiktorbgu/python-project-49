@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import prompt
 from random import randint, choices
 from brain_games.games.game_runer import run_game
 
@@ -31,9 +30,8 @@ def brain_calc(current_round):
     randvalue2 = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
     operation = choices(list(operations.keys()))[0]
     print(f'Question: {randvalue1} {operation} {randvalue2}')
-    answer = prompt.string('Your answer: ')
     correct_result = operations[operation](randvalue1, randvalue2)
-    return int(answer), correct_result
+    return str(correct_result)
 
 
 def run_brain_calc():
