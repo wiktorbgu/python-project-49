@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from random import randint
-from brain_games.games.game_runer import run_game
+from brain_games.game_runer import run_game
 
 MIN_VAL_RANDOM_NUMBER = 1
 MAX_VAL_RANDOM_NUMBER = 1000
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(random_number):
@@ -15,9 +16,9 @@ def is_prime(random_number):
     return True
 
 
-def brain_prime(current_round):
-    if current_round == 1:
-        print('Answer "yes" if given number is prime. Otherwise answer "no".')
+def brain_prime(info=None):
+    if info == 'description':
+        return DESCRIPTION
     randvalue = randint(MIN_VAL_RANDOM_NUMBER, MAX_VAL_RANDOM_NUMBER)
     print(f'Question: {randvalue}')
     if is_prime(randvalue) is True:
@@ -27,8 +28,4 @@ def brain_prime(current_round):
 
 
 def run_brain_prime():
-    run_game(brain_prime)
-
-
-if __name__ == '__main__':
     run_game(brain_prime)

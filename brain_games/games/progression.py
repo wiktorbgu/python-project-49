@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from random import randint, choices
-from brain_games.games.game_runer import run_game
+from brain_games.game_runer import run_game
 
 MIN_LENGTH_PROGRESSION = 5
 MAX_LENGTH_PROGRESSION = 10
@@ -11,10 +11,12 @@ MAX_VAL_STEP = 30
 MIN_VAL_START_PROGRESS = 1
 MAX_VAL_START_PROGRESS = 50
 
+DESCRIPTION = 'What number is missing in the progression?'
 
-def brain_progression(current_round):
-    if current_round == 1:
-        print('What number is missing in the progression?')
+
+def brain_progression(info=None):
+    if info == 'description':
+        return DESCRIPTION
     length = randint(MIN_LENGTH_PROGRESSION, MAX_LENGTH_PROGRESSION)
     randval_start = randint(MIN_VAL_START_PROGRESS, MAX_VAL_START_PROGRESS)
     # * choices для рандомной возможности обратного шага
@@ -32,8 +34,4 @@ def brain_progression(current_round):
 
 
 def run_brain_progression():
-    run_game(brain_progression)
-
-
-if __name__ == '__main__':
     run_game(brain_progression)
